@@ -1,0 +1,59 @@
+name: vocamate
+description: "A new Flutter project."
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  icons_launcher: ^3.0.1
+  cupertino_icons: ^1.0.8
+  flutter_native_splash: ^2.4.6
+  font_awesome_flutter: ^10.7.0
+  google_fonts: ^6.1.0
+  firebase_core: ^2.30.0
+  http: ^1.4.0
+  flutter_svg: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/splash_light.png
+    - assets/images/fire.png
+    - assets/images/coin.png
+    - assets/images/english_flag.png
+    - assets/images/vietnam_flag.png
+    - assets/images/korea_flag.png
+    - assets/images/flashcard_icon.png
+    - assets/images/1st_win_badge.png
+    - assets/images/goal_badge.png
+    - assets/images/star_rise_badge.png
+    - assets/images/lock_badge.png
+    - assets/images/lexi_default_avatar.png
+    - assets/images/fruit.png
+
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+  color: "#ffffff"  # màu nền, nên để trắng để logo nổi bật
+  image: assets/images/splash_light.png
+  android_gravity: center
+  fullscreen: true
+
+icons_launcher:
+  image_path: "assets/images/logo.png"
+  adaptive_foreground_image: "assets/images/logo.png"
+  adaptive_background_image: "#ffffff"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
