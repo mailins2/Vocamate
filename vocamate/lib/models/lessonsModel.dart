@@ -8,7 +8,7 @@ class Lessons {
   int id;
   String icon;
   String title;
-  TargetLang targetLang;
+  String targetLang;
   int level;
   int unit;
   int reward;
@@ -27,7 +27,7 @@ class Lessons {
     id: json["id"],
     icon: json["icon"],
     title: json["title"],
-    targetLang: targetLangValues.map[json["targetLang"]]!,
+    targetLang: json["targetLang"],
     level: json["level"],
     unit: json["unit"],
     reward: json["reward"],
@@ -37,24 +37,24 @@ class Lessons {
     "id": id,
     "icon": icon,
     "title": title,
-    "targetLang": targetLangValues.reverse[targetLang],
+    "targetLang": targetLang,
     "level": level,
     "unit": unit,
     "reward": reward,
   };
 }
 
-enum TargetLang {
-  EN,
-  KO,
-  VI
-}
-
-final targetLangValues = EnumValues({
-  "en": TargetLang.EN,
-  "ko": TargetLang.KO,
-  "vi": TargetLang.VI
-});
+// enum TargetLang {
+//   EN,
+//   KO,
+//   VI
+// }
+//
+// final targetLangValues = EnumValues({
+//   "en": TargetLang.EN,
+//   "ko": TargetLang.KO,
+//   "vi": TargetLang.VI
+// });
 
 class EnumValues<T> {
   Map<String, T> map;

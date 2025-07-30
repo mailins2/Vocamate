@@ -1,7 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vocamate/screens/home.dart';
+import 'package:vocamate/screens/signIn.dart';
 import 'constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'screens/lessons.dart';
@@ -11,6 +14,7 @@ import 'screens/ranks.dart';
 import 'screens/profile.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -23,7 +27,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Vocamate', home: MyHomePage());
+    return MaterialApp(
+      title: 'Vocamate',
+      home: FirebaseAuth.instance.currentUser == null ? SignIn() : MyHomePage(),
+    );
   }
 }
 
@@ -37,6 +44,7 @@ class MyHomePage extends StatefulWidget {
 class NavigatorPage extends State<MyHomePage> {
   Widget currentState = HomePage();
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,44 +55,37 @@ class NavigatorPage extends State<MyHomePage> {
         unselectedItemColor: Colors.grey,
         unselectedLabelStyle: TextStyle(color: Colors.grey),
         backgroundColor: Colors.white,
-        onTap: (int index){
-          if(index == 0){
+        onTap: (int index) {
+          if (index == 0) {
             setState(() {
               currentState = HomePage();
               selectedIndex = 0;
             });
-          }
-          else if(index == 1){
+          } else if (index == 1) {
             setState(() {
               currentState = LessonsPage();
-              selectedIndex =1;
+              selectedIndex = 1;
             });
-          }
-          else if(index == 2){
+          } else if (index == 2) {
             setState(() {
               currentState = FeedsPage();
-              selectedIndex =2;
+              selectedIndex = 2;
             });
-          }
-          else if(index == 3){
+          } else if (index == 3) {
             setState(() {
               currentState = Ranks();
-              selectedIndex =3;
+              selectedIndex = 3;
             });
-          }
-          else{
+          } else {
             setState(() {
               currentState = Profile();
-              selectedIndex =4;
+              selectedIndex = 4;
             });
           }
         },
-        currentIndex:  selectedIndex,
+        currentIndex: selectedIndex,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
             icon: Icon(Icons.import_contacts),
             label: "Lessons",
