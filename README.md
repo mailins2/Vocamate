@@ -37,25 +37,33 @@ lib/
 ## UI
 
 1/ Sig up/ log in 
+
 <img width="664" height="1415" alt="image" src="https://github.com/user-attachments/assets/d23e7d7f-c941-4401-b8d4-6ff106f9c63f" />
+
 <img width="677" height="1413" alt="image" src="https://github.com/user-attachments/assets/4111cae9-a12b-4a0a-b704-ad950fbbd399" />
 
 2/ Main screen
+
 <img width="683" height="1418" alt="image" src="https://github.com/user-attachments/assets/9931ae31-7851-43e4-8cdc-550484891190" />
 
 3/Lesson screen
+
 <img width="678" height="1415" alt="image" src="https://github.com/user-attachments/assets/1c7df701-bac5-497f-8e00-cb83cae6447d" />
 
 4/Flashcard screen
+
 <img width="676" height="1418" alt="image" src="https://github.com/user-attachments/assets/40306bf0-6c1a-4ed9-9839-51883f6b440d" /><img width="678" height="1418" alt="image" src="https://github.com/user-attachments/assets/1987b9ef-e731-4920-89b3-a694eb886b77" />
 
 5/ Feed screen
+
 <img width="683" height="1419" alt="image" src="https://github.com/user-attachments/assets/8f316393-14bf-4db5-a201-58b92001336e" />
 
 6/Ranks screen
+
 <img width="669" height="1418" alt="image" src="https://github.com/user-attachments/assets/8420a4c8-6a0a-427f-a049-f23146ec3000" />
 
 7/Profile screen
+
 <img width="679" height="1419" alt="image" src="https://github.com/user-attachments/assets/ebc5ef92-2363-4e46-90a6-e8d8bb945c18" />
 
 
