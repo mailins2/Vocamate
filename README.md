@@ -28,10 +28,15 @@
 ## 📂 Project Structure Overview
 
 lib/
+
 ├── screens/ # App screens (Home, SignIn, Lessons, Cards, etc.)
+
 ├── models/ # Data models like LessonModel, VocabularyModel
+
 ├── services/ # API service handlers
+
 ├── widgets/ # Reusable widgets (LessonCard, LockedLesson, etc.)
+
 ├── constants.dart # Shared constants and styling
 
 ## UI
